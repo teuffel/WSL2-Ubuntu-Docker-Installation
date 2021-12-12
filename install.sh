@@ -1,11 +1,11 @@
 set -e 
-DOCKER_COMPOSE_VERSION=1.29.2
-REQS=ca-certificates curl gnupg lsb-release
-DOCKER=docker-ce docker-ce-cli containerd.io
+DOCKER_COMPOSE_VERSION="1.29.2"
+REQS="ca-certificates curl gnupg lsb-release"
+DOCKER="docker-ce docker-ce-cli containerd.io"
 echo
 echo "================================================================================"
 echo
-echo "Installing docker-ce
+echo "Installing docker-ce"
 apt-get update -qq > /dev/null 
 apt-get install -y -qq $REQS > /dev/null
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
