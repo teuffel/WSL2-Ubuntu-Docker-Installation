@@ -1,3 +1,4 @@
+#!/bin/bash
 set -e 
 DOCKER_COMPOSE_VERSION="1.29.2"
 REQS="ca-certificates curl gnupg lsb-release"
