@@ -28,11 +28,10 @@ echo
 echo "================================================================================"
 echo
 echo "Add docker autostart to .bashrc"
-echo "RUNNING=`ps auxf | grep dockerd | grep -v grep`" >> ~/.bashrc
-echo "   if [ -z "$RUNNING" ]; then" >> ~/.bashrc
-echo "      dockerd > /dev/null 2>&1 &" >> ~/.bashrc
-echo "      disown" >> ~/.bashrc
-echo "   fi" >> ~/.bashrc
-echo "Finished"
+echo 'RUNNING=`ps aux | grep dockerd | grep -v grep`' >> ~/.bashrc
+echo 'if [ -z "$RUNNING" ]; then' >> ~/.bashrc
+echo '    sudo dockerd > /dev/null 2>&1 &' >> ~/.bashrc
+echo '    disown' >> ~/.bashrc
+echo 'fi' >> ~/.bashrc
 
 
